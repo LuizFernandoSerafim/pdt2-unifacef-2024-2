@@ -27,8 +27,7 @@ jobs:
             with:
               node-version: 20
               cache: 'npm'
-              cache-dependency-path: './karangos/
-                package-lock.json'
+              cache-dependency-path: './karangos/package-lock.json'
 
           # 3) Altera para a pasta karangos
           - run: cd karangos
