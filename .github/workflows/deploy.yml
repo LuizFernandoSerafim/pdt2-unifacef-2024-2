@@ -34,10 +34,11 @@ jobs:
 
           #4) Instala as dependencias
           - run: npm install
-            working-directory: './karangos\'
+            working-directory: './karangos/'
 
           #5) Faz a build 
           - run: npm run build
+            working-directory: './karangos/'
 
           #6) Faz a publicação no GitHub Pages
           - name: Deploy
