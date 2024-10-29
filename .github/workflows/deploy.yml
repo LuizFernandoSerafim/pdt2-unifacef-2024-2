@@ -19,6 +19,9 @@ jobs:
           # 1) Clona o reposittório no container
           - uses: actions/checkout@v3
 
+         # 3) Altera para a pasta karangos
+          - run: cd karangos
+            working-directory: './karangos/'
 
           # 2) Assegura que o node está instalado no
           #    container com um versão especifica
@@ -29,9 +32,7 @@ jobs:
               cache: 'npm'
               cache-dependency-path: './karangos/package-lock.json'
 
-          # 3) Altera para a pasta karangos
-          - run: cd karangos
-            working-directory: './karangos/'
+         
 
           # 4) Instala as dependências
           - run: npm install
